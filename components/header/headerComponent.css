@@ -1,0 +1,32 @@
+.headerComponent {
+  width: 100%;
+  height: 60px;
+  background-color: var(--cafe-oscuro);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+.headerComponent h1 {
+  color: var(--beige);
+  font-size: var(--titulo-h2);
+  margin-left: 1rem;
+}
+
+.div-tareas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30rem;
+  height: 100%;
+  border: 1px solid var(--beige);
+}
+
+.div-user {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: var(--beige);
+}
