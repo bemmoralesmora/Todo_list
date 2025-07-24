@@ -3,15 +3,16 @@
   height: 60px;
   background-color: var(--cafe-oscuro);
 
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 35rem auto;
+  gap: 1rem;
   align-items: center;
-  justify-content: space-around;
   padding: 1rem;
 }
 
 .headerComponent h1 {
   color: var(--beige);
-  font-size: var(--titulo-h2);
+  font-size: var(--titulo-h1);
   margin-left: 1rem;
 }
 
@@ -21,7 +22,32 @@
   justify-content: center;
   width: 30rem;
   height: 100%;
+  color: var(--beige);
+  font-size: var(--titulo-h2);
+  border-radius: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.numero-pendientes {
+  width: 3rem;
+  height: 3rem;
+  margin-left: 0.5rem;
+  font-weight: bold;
+  color: var(--beige);
   border: 1px solid var(--beige);
+
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .div-user {
