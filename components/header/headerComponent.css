@@ -1,0 +1,58 @@
+.headerComponent {
+  width: 100%;
+  height: 60px;
+  background-color: var(--cafe-oscuro);
+
+  display: grid;
+  grid-template-columns: 1fr 35rem auto;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem;
+}
+
+.headerComponent h1 {
+  color: var(--beige);
+  font-size: var(--titulo-h1);
+  margin-left: 1rem;
+}
+
+.div-tareas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30rem;
+  height: 100%;
+  color: var(--beige);
+  font-size: var(--titulo-h2);
+  border-radius: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.numero-pendientes {
+  width: 3rem;
+  height: 3rem;
+  margin-left: 0.5rem;
+  font-weight: bold;
+  color: var(--beige);
+  border: 1px solid var(--beige);
+
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.div-user {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: var(--beige);
+}
