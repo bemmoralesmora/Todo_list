@@ -1,0 +1,18 @@
+.footerComponent {
+  width: 100%;
+  height: 60px;
+  background-color: var(--cafe-oscuro);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.github-link {
+  color: var(--beige);
+  font-size: var(--titulo-h2);
+  text-decoration: none;
+}
+
+.github-link:hover {
+  color: var(--beige-hover);
+}
