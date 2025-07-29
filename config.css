@@ -12,6 +12,7 @@ html {
 :root {
   --letra: rgb(71, 61, 61);
   --beige: rgb(248, 228, 184);
+  --beige-hover: rgb(255, 255, 255);
   --cafe-oscuro: #282c34;
 
   --titulo-h1: 2.6rem;
