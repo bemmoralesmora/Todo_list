@@ -1,0 +1,55 @@
+.item-tarea {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  gap: 10px;
+}
+
+.numero {
+  font-weight: bold;
+  color: var(--letra);
+  font-size: var(--titulo-h2);
+}
+
+.titulo {
+  font-size: 1.2rem;
+  color: var(--letra);
+  font-size: var(--titulo-h2);
+}
+
+.estado {
+  width: 10rem;
+  color: var(--letra);
+  font-size: var(--titulo-h3);
+  background-color: var(--verde-claro);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.fechaTarea {
+  color: gray;
+  font-size: var(--titulo-h3);
+}
+
+.segunda-fecha {
+  color: var(--letra);
+  font-size: var(--titulo-h3);
+}
+
+.lista-integrante {
+  color: var(--letra);
+  font-size: var(--titulo-h3);
+}
+
+.boton-eliminar {
+  background-color: var(--rojo-claro);
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
