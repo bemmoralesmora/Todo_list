@@ -16,6 +16,8 @@ html {
   --cafe-oscuro: #282c34;
   --verde-claro: rgb(110, 240, 105);
   --rojo-claro: rgb(223, 91, 91);
+  --rojo-hover: rgb(231, 43, 43);
+  --azul-claro: rgb(173, 216, 230);
 
   --titulo-h1: 2.6rem;
   --titulo-h2: 1.8rem;

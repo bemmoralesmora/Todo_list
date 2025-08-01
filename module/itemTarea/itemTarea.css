@@ -3,20 +3,20 @@
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid var(--beige-hover);
   gap: 10px;
 }
 
 .numero {
   font-weight: bold;
   color: var(--letra);
-  font-size: var(--titulo-h2);
+  font-size: var(--titulo-h3);
 }
 
 .titulo {
   font-size: 1.2rem;
   color: var(--letra);
-  font-size: var(--titulo-h2);
+  font-size: var(--titulo-h3);
 }
 
 .estado {
@@ -27,7 +27,7 @@
   border: none;
   padding: 5px 10px;
   border-radius: 5px;
-  cursor: pointer;
+  text-align: center;
 }
 
 .fechaTarea {
@@ -52,4 +52,8 @@
   padding: 5px 10px;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.boton-eliminar:hover {
+  background-color: var(--rojo-hover);
 }

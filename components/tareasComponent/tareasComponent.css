@@ -3,4 +3,5 @@
   height: 100%;
   border: 1px solid var(--cafe-oscuro);
   border-radius: 1rem;
+  padding: 2rem;
 }

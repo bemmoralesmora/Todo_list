@@ -19,7 +19,7 @@ export function itemTarea(
   titulo.textContent = title;
   item.appendChild(titulo);
 
-  let estadoTareas = document.createElement("button");
+  let estadoTareas = document.createElement("div");
   estadoTareas.className = "estado";
   estadoTareas.textContent = estado;
   item.appendChild(estadoTareas);

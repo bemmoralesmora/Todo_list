@@ -10,8 +10,44 @@ function dashboard() {
 
   let section = document.createElement("section");
   section.className = "section-component";
-  section.appendChild(tareasComponent());
-  section.appendChild(informacionComponent());
+
+  let tareasdb = [
+    {
+      id: 1,
+      title: "Tarea 1",
+      estado: "Pendiente",
+      fecha: "2023-10-01",
+      segundaFecha: "2023-10-15",
+      integrantes: "Juan, Maria",
+      descripcionInformacion:
+        "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    },
+    {
+      id: 2,
+      title: "Tarea 2",
+      estado: "En Progreso",
+      fecha: "2023-10-02",
+      segundaFecha: "2023-10-16",
+      integrantes: "Pedro, Ana",
+      descripcionInformacion:
+        "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    },
+  ];
+
+  section.appendChild(tareasComponent(tareasdb));
+
+  let tareaInformacion = {
+    id: 1,
+    title: "Tilapias360",
+    estado: "Pendiente",
+    fecha: "2023-10-01",
+    segundaFecha: "2023-10-15",
+    integrantes: "Rocky, Paris",
+    descripcionInformacion:
+      "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+  };
+
+  section.appendChild(informacionComponent(tareaInformacion));
   dashboard.appendChild(section);
 
   dashboard.appendChild(footerComponent());
