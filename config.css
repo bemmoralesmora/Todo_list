@@ -6,7 +6,7 @@
 
 html {
   font-size: 10px;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: "Lilita One", sans-serif;
 }
 
 :root {
@@ -18,9 +18,10 @@ html {
   --rojo-claro: rgb(223, 91, 91);
   --rojo-hover: rgb(231, 43, 43);
   --azul-claro: rgb(173, 216, 230);
+  --azul-oscuro: rgb(116, 116, 250);
 
   --titulo-h1: 2.6rem;
-  --titulo-h2: 1.8rem;
-  --titulo-h3: 1.2rem;
+  --titulo-h2: 1.5rem;
+  --titulo-h3: 1.4rem;
   --parrafo: 1rem;
 }

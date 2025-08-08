@@ -9,4 +9,31 @@
   font-size: 20px;
   font-weight: 600;
   color: var(--letra);
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* ================== MEDIA QUERIES ================== */
+
+/* Teléfonos (hasta 480px) */
+@media (max-width: 480px) {
+  .DOM {
+    font-size: 14px;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Tablets (481px – 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .DOM {
+    font-size: 16px;
+  }
+}
+
+/* Laptops pequeños (769px – 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .DOM {
+    font-size: 18px;
+  }
 }

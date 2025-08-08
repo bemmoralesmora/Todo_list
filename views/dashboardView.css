@@ -12,4 +12,36 @@
   align-items: center;
   justify-content: center;
   background-color: var(--beige);
+  gap: 1rem;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* ================== MEDIA QUERIES ================== */
+
+/* Teléfonos (hasta 480px) */
+@media (max-width: 480px) {
+  .section-component {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    align-items: stretch;
+    justify-content: stretch;
+    padding: 1rem 0.5rem;
+  }
+}
+
+/* Tablets (481px – 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .section-component {
+    grid-template-columns: 60% 40%;
+    padding: 1rem;
+  }
+}
+
+/* Laptops pequeños (769px – 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .section-component {
+    grid-template-columns: 65% 35%;
+    padding: 1.5rem;
+  }
 }

@@ -5,6 +5,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 .github-link {
@@ -15,4 +18,33 @@
 
 .github-link:hover {
   color: var(--beige-hover);
+}
+
+/* ================== MEDIA QUERIES ================== */
+
+/* Teléfonos (hasta 480px) */
+@media (max-width: 480px) {
+  .footerComponent {
+    height: auto;
+    padding: 0.5rem;
+  }
+
+  .github-link {
+    font-size: 1rem; /* o usa una variable responsive si tienes */
+    word-break: break-word;
+  }
+}
+
+/* Tablets (481px – 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .github-link {
+    font-size: 1.2rem;
+  }
+}
+
+/* Laptops pequeños (769px – 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .github-link {
+    font-size: 1.4rem;
+  }
 }

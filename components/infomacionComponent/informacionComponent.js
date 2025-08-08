@@ -1,3 +1,5 @@
+import { formulario } from "../formularioComponent/formularioComponent.js";
+
 export function informacionComponent(tarea) {
   let informacion = document.createElement("div");
   informacion.className = "informacion-component";
@@ -10,7 +12,10 @@ export function informacionComponent(tarea) {
   botonAgregar.className = "boton-agregar";
   botonAgregar.textContent = "+ Agregar";
   botonAgregar.addEventListener("click", () => {
-    alert("Agregar nueva tarea");
+    if (!document.querySelector(".formulario")) {
+      const modal = formulario();
+      document.body.appendChild(modal);
+    }
   });
   botones.appendChild(botonAgregar);
 

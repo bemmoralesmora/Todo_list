@@ -5,24 +5,29 @@
   padding: 10px;
   border-bottom: 1px solid var(--beige-hover);
   gap: 10px;
+  flex-wrap: wrap;
+}
+
+.numero,
+.titulo,
+.estado,
+.fechaTarea,
+.segunda-fecha,
+.lista-integrante {
+  font-size: var(--titulo-h3);
+  color: var(--letra);
 }
 
 .numero {
   font-weight: bold;
-  color: var(--letra);
-  font-size: var(--titulo-h3);
 }
 
 .titulo {
   font-size: 1.2rem;
-  color: var(--letra);
-  font-size: var(--titulo-h3);
 }
 
 .estado {
   width: 10rem;
-  color: var(--letra);
-  font-size: var(--titulo-h3);
   background-color: var(--verde-claro);
   border: none;
   padding: 5px 10px;
@@ -32,17 +37,6 @@
 
 .fechaTarea {
   color: gray;
-  font-size: var(--titulo-h3);
-}
-
-.segunda-fecha {
-  color: var(--letra);
-  font-size: var(--titulo-h3);
-}
-
-.lista-integrante {
-  color: var(--letra);
-  font-size: var(--titulo-h3);
 }
 
 .boton-eliminar {
@@ -52,8 +46,65 @@
   padding: 5px 10px;
   border-radius: 5px;
   cursor: pointer;
+  font-family: "Lilita One", sans-serif;
 }
 
 .boton-eliminar:hover {
   background-color: var(--rojo-hover);
+}
+
+/* ================== MEDIA QUERIES ================== */
+
+/* Teléfonos (hasta 480px) */
+@media (max-width: 480px) {
+  .item-tarea {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .estado {
+    width: 100%;
+    text-align: left;
+  }
+
+  .boton-eliminar {
+    align-self: flex-end;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+  }
+
+  .titulo,
+  .numero,
+  .fechaTarea,
+  .segunda-fecha,
+  .lista-integrante {
+    font-size: 1rem;
+  }
+}
+
+/* Tablets (481px – 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .item-tarea {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .estado {
+    width: 100%;
+    max-width: 8rem;
+  }
+
+  .boton-eliminar {
+    font-size: 0.95rem;
+  }
+}
+
+/* Laptops pequeños (769px – 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .estado {
+    width: 9rem;
+  }
 }
