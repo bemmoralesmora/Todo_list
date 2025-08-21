@@ -14,7 +14,7 @@ async function dashboard() {
 
   try {
     const response = await fetch(
-      "https://todo-list-backend-ixh8.onrender.com/api/tareas"
+      "https://todo-list-backend-ixh8.onrender.coms/api/tareas"
     );
     if (!response.ok) throw new Error("Error en la respuesta del servidor");
     const tareasdb = await response.json();
