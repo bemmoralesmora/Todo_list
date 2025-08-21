@@ -2,56 +2,39 @@ import { headerComponent } from "../components/header/headerComponent.js";
 import { footerComponent } from "../components/footer/footerComponent.js";
 import { informacionComponent } from "../components/infomacionComponent/informacionComponent.js";
 import { tareasComponent } from "../components/tareasComponent/tareasComponent.js";
-function dashboard() {
-  let dashboard = document.querySelector("#dashboard");
+
+async function dashboard() {
+  const dashboard = document.querySelector("#dashboard");
   dashboard.className = "dashboard";
 
   dashboard.appendChild(headerComponent());
 
-  let section = document.createElement("section");
+  const section = document.createElement("section");
   section.className = "section-component";
 
-  let tareasdb = [
-    {
-      id: 1,
-      title: "Tarea 1",
-      estado: "Pendiente",
-      fecha: "2023-10-01",
-      segundaFecha: "2023-10-15",
-      integrantes: "Juan, Maria",
-      descripcionInformacion:
-        "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    },
-    {
-      id: 2,
-      title: "Tarea 2",
-      estado: "En Progreso",
-      fecha: "2023-10-02",
-      segundaFecha: "2023-10-16",
-      integrantes: "Pedro, Ana",
-      descripcionInformacion:
-        "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-    },
-  ];
+  try {
+    const response = await fetch(
+      "https://todo-list-backend-ixh8.onrender.com/api/tareas"
+    );
+    if (!response.ok) throw new Error("Error en la respuesta del servidor");
+    const tareasdb = await response.json();
 
-  section.appendChild(tareasComponent(tareasdb));
+    if (!tareasdb.length) {
+      section.innerHTML = `<div class="no-tareas">No hay tareas disponibles</div>`;
+    } else {
+      // Renderiza lista de tareas
+      section.appendChild(tareasComponent(tareasdb));
 
-  let tareaInformacion = {
-    id: 1,
-    title: "Tilapias360",
-    estado: "Pendiente",
-    fecha: "2023-10-01",
-    segundaFecha: "2023-10-15",
-    integrantes: "Rocky, Paris",
-    descripcionInformacion:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  };
+      // Renderiza info de la primera tarea
+      section.appendChild(informacionComponent(tareasdb[0]));
+    }
+  } catch (error) {
+    console.error(error);
+    section.innerHTML = `<div class="error-message">Error al cargar las tareas</div>`;
+  }
 
-  section.appendChild(informacionComponent(tareaInformacion));
   dashboard.appendChild(section);
-
   dashboard.appendChild(footerComponent());
-  return dashboard;
 }
 
-dashboard();
+document.addEventListener("DOMContentLoaded", dashboard);

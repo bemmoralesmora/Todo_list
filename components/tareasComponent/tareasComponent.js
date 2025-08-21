@@ -4,14 +4,13 @@ export function tareasComponent(tareasdb) {
   let tareas = document.createElement("div");
   tareas.className = "tareas-component";
 
-  tareasdb.forEach((tarea) => {
+  tareasdb.forEach((tarea, index) => {
     let item = itemTarea(
-      tarea.id,
-      tarea.title,
-      tarea.estado,
-      tarea.fecha,
-      tarea.segundaFecha,
-      tarea.integrantes
+      index + 1,
+      tarea.nombre,
+      tarea.estado_tarea,
+      tarea.fecha_asignada,
+      tarea.fecha_entrega
     );
     tareas.appendChild(item);
   });
