@@ -1,6 +1,4 @@
 .item-tarea {
-  all: unset;
-  width: 80rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
