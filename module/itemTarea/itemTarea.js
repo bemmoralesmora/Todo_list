@@ -6,7 +6,7 @@ export function itemTarea(
   fecha_entrega,
   integrantes
 ) {
-  let item = document.createElement("div");
+  let item = document.createElement("button");
   item.className = "item-tarea";
 
   let numero = document.createElement("div");

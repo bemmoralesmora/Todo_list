@@ -13,6 +13,8 @@ export function headerComponent() {
 
   let numeroPendientes = document.createElement("span");
   numeroPendientes.className = "numero-pendientes";
+  numeroPendientes.id = "contador-tareas";
+
   numeroPendientes.textContent = "0";
   divTareas.appendChild(numeroPendientes);
 

@@ -1,4 +1,6 @@
 .item-tarea {
+  all: unset;
+  width: 80rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -6,6 +8,11 @@
   border-bottom: 1px solid var(--beige-hover);
   gap: 10px;
   flex-wrap: wrap;
+}
+
+.item-tarea:hover {
+  background-color: var(--beige-hover);
+  cursor: pointer;
 }
 
 .numero,

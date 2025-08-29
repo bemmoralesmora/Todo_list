@@ -4,6 +4,7 @@ export function informacionComponent(tarea) {
   let informacion = document.createElement("div");
   informacion.className = "informacion-component";
 
+  // --- Botones ---
   let botones = document.createElement("div");
   botones.className = "botones";
   informacion.appendChild(botones);
@@ -27,23 +28,24 @@ export function informacionComponent(tarea) {
   });
   botones.appendChild(botonArchivar);
 
+  // --- Contenedor info ---
   let contenedorInformacion = document.createElement("div");
   contenedorInformacion.className = "contenedor-informacion";
   informacion.appendChild(contenedorInformacion);
 
   let estadoInformacion = document.createElement("div");
   estadoInformacion.className = "estado-informacion";
-  estadoInformacion.textContent = ` ${tarea.estado}`;
+  estadoInformacion.textContent = ` ${tarea.estado_tarea}`;
   contenedorInformacion.appendChild(estadoInformacion);
 
   let tituloInformacion = document.createElement("div");
   tituloInformacion.className = "titulo-informacion";
-  tituloInformacion.textContent = ` ${tarea.title}`;
+  tituloInformacion.textContent = ` ${tarea.nombre}`;
   contenedorInformacion.appendChild(tituloInformacion);
 
   let descripcionInformacion = document.createElement("div");
   descripcionInformacion.className = "descripcion-informacion";
-  descripcionInformacion.textContent = `${tarea.descripcionInformacion}`;
+  descripcionInformacion.textContent = tarea.descripcion || "Sin descripción";
   contenedorInformacion.appendChild(descripcionInformacion);
 
   let integranteContener = document.createElement("div");
@@ -53,7 +55,7 @@ export function informacionComponent(tarea) {
 
   let integrantesInformacion = document.createElement("div");
   integrantesInformacion.className = "integrantes-informacion";
-  integrantesInformacion.textContent = tarea.integrantes;
+  integrantesInformacion.textContent = tarea.integrantes || "N/A";
   integranteContener.appendChild(integrantesInformacion);
 
   return informacion;

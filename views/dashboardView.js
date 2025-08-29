@@ -22,10 +22,11 @@ async function dashboard() {
     if (!tareasdb.length) {
       section.innerHTML = `<div class="no-tareas">No hay tareas disponibles</div>`;
     } else {
-      // Renderiza lista de tareas
-      section.appendChild(tareasComponent(tareasdb));
+      const contador = document.querySelector("#contador-tareas");
+      if (contador) contador.textContent = tareasdb.length;
 
-      // Renderiza info de la primera tarea
+      section.appendChild(tareasComponent(tareasdb, section));
+
       section.appendChild(informacionComponent(tareasdb[0]));
     }
   } catch (error) {
